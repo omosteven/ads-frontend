@@ -1,12 +1,21 @@
 import assets from "assets";
 import { Button } from "components/ui";
 
-const ProductsCard = ({ toggleModal }: { toggleModal: () => void }) => {
+const ProductsCard = ({
+  toggleModal,
+  productDetails,
+}: {
+  toggleModal: () => void;
+  productDetails?: any;
+}) => {
+  // id, handle, 
+  const { image, title, variants } = productDetails || {};
+  const firstPrice = variants?.[0]?.price;
   return (
     <div className="products__card">
-      <img src={assets.images.dummyImage1} alt="Product" />
-      <h4>Flower Vase</h4>
-      <p>$20,000 | London, England</p>
+      <img src={image?.src || assets.images.dummyImage1} alt="Product" />
+      <h4>{title}</h4>
+      <p>From ${firstPrice}</p>
       <Button text="View Product" onClick={toggleModal} />
     </div>
   );
