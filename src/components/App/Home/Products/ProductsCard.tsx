@@ -2,13 +2,13 @@ import assets from "assets";
 import { Button } from "components/ui";
 
 const ProductsCard = ({
-  toggleModal,
   productDetails,
+  handleViewProduct,
 }: {
-  toggleModal: () => void;
   productDetails?: any;
+  handleViewProduct?: (product: any) => void;
 }) => {
-  // id, handle, 
+  // id, handle,
   const { image, title, variants } = productDetails || {};
   const firstPrice = variants?.[0]?.price;
   return (
@@ -16,7 +16,10 @@ const ProductsCard = ({
       <img src={image?.src || assets.images.dummyImage1} alt="Product" />
       <h4>{title}</h4>
       <p>From ${firstPrice}</p>
-      <Button text="View Product" onClick={toggleModal} />
+      <Button
+        text="View Product"
+        onClick={() => handleViewProduct?.(productDetails)}
+      />
     </div>
   );
 };

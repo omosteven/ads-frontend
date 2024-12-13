@@ -6,6 +6,19 @@
     margin-top: 60px;
   }
 
+  &__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 16px;
+    @media screen and (max-width: $medium-screen) {
+      display: block;
+      width: 100%;
+      .search-input {
+        width: 100%;
+      }
+    }
+  }
   h3 {
     color: $primary-color;
     font-weight: 800;
@@ -75,7 +88,7 @@
       margin-bottom: 0 !important;
     }
     @media screen and (max-width: $small-screen) {
-      height: 250px;
+      height: 280px;
       h4 {
         font-size: 18px;
       }

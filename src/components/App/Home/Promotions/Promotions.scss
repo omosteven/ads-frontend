@@ -1,0 +1,17 @@
+@import "src/components/ui/__variables";
+
+.promotions {
+  margin-bottom: 60px;
+  &__listing {
+    .slick-slide {
+      padding: 10px;
+      padding-bottom: 30px;
+    }
+  }
+
+  h3 {
+    color: $primary-color;
+    font-weight: 800;
+    font-size: 32px;
+  }
+}

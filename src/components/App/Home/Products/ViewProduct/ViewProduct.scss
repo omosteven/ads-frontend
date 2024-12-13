@@ -1,2 +1,43 @@
+@import "src/components/ui/__variables";
+
 .view-product {
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+  h4 {
+    color: $black-color;
+    font-weight: bold;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  h5 {
+    color: $black-color;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .main-img {
+    width: 200px;
+    height: 200px;
+    border: 0.5px solid $primary-color;
+  }
+
+  .other-img__container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .other-img {
+    width: 200px;
+    height: 200px;
+    border: 0.05px solid $secondary-color;
+    display: block;
+  }
 }
