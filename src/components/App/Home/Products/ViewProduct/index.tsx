@@ -1,6 +1,7 @@
 import { DefaultModal } from "components/ui";
 import "./ViewProduct.scss";
 import assets from "assets";
+import { useNavigate } from "react-router-dom";
 
 const ViewProduct = ({
   toggleModal,
@@ -19,11 +20,18 @@ const ViewProduct = ({
     tags,
     vendor,
     body_html,
+    storeUrl,
   } = selectedProduct || {};
   // const firstPrice = variants?.[0]?.price;
-
+  const navigate = useNavigate();
   return (
-    <DefaultModal isOpen onClose={toggleModal} buttonText="View On Our Store">
+    <DefaultModal
+      hideButton={storeUrl ? false : true}
+      isOpen
+      onClose={toggleModal}
+      buttonText="View On Our Store"
+      onButtonClick={() => navigate(storeUrl, {})}
+    >
       <div className="view-product">
         {/* <img
           src={image?.src || assets.images.dummyImage1}
@@ -45,7 +53,7 @@ const ViewProduct = ({
                     src={currentImage?.src || assets.images.dummyImage1}
                     alt={title}
                   />
-                  <b>${price}</b>
+                  {price && <b>${price}</b>}
                   <h6>{title}</h6>
                 </div>
               );
@@ -54,7 +62,8 @@ const ViewProduct = ({
         </div>
         <h4>Product Details</h4>
         <p>
-          #{product_type}{tags ? `, ${tags}` : ""}
+          #{product_type}
+          {tags ? `, ${tags}` : ""}
         </p>
         <p>
           <b>Sold By</b>: {vendor}

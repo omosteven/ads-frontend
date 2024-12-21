@@ -60,11 +60,11 @@ const Products = ({
 
   return (
     <>
-      <section className="products">
+      <section className="products" id="products">
         <div className="products__header">
           <div>
             <h3>Our Recent Listing</h3>
-            <p>Go through our recent listing and place your order</p>
+            <p>Go through our recent listing and place your order.</p>
           </div>
           <Search placeholder="Search through our listing." />
         </div>

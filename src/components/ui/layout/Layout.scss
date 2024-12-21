@@ -11,6 +11,35 @@ body {
   // border: 0.5px solid $primary-color;
 }
 
+.layout-footer {
+  height: 100px;
+  background-color: $background-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 150px;
+  color: $primary-color;
+  text-align: center;
+  width: 100%;
+  p{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  @media screen and (max-width: $large-screen) {
+    padding: 0px 70px;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    padding: 0px 50px;
+  }
+
+  @media screen and (max-width: $small-screen) {
+    padding: 0px 12px;
+  }
+}
+
 .layout-header {
   height: 100px;
   background-color: $background-color;
@@ -26,6 +55,10 @@ body {
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
   }
   div {
     display: flex;
