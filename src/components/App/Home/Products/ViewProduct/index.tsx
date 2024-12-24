@@ -1,7 +1,6 @@
 import { DefaultModal } from "components/ui";
 import "./ViewProduct.scss";
 import assets from "assets";
-import { useNavigate } from "react-router-dom";
 
 const ViewProduct = ({
   toggleModal,
@@ -23,14 +22,13 @@ const ViewProduct = ({
     storeUrl,
   } = selectedProduct || {};
   // const firstPrice = variants?.[0]?.price;
-  const navigate = useNavigate();
   return (
     <DefaultModal
       hideButton={storeUrl ? false : true}
       isOpen
       onClose={toggleModal}
       buttonText="View On Our Store"
-      onButtonClick={() => navigate(storeUrl, {})}
+      onButtonClick={() => storeUrl && window.open(storeUrl, "_blank")}
     >
       <div className="view-product">
         {/* <img
