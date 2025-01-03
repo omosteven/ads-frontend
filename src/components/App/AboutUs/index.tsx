@@ -16,7 +16,7 @@ const AboutUs = () => {
       <section>
         <h2>Who We Are</h2>
         <p>
-          MyPicks is a digital pathway product and services platform providing
+          BuyThus is a digital pathway product and services platform providing
           advertising and associate marketing services harnessing digital tools
           to create innovative customer experiences. We operate to collaborate
           with products and service providers in creating the appropriate
