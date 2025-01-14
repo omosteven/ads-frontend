@@ -1,5 +1,7 @@
+import { useCallback } from "react";
 import Icon from "../Icon";
 import "./Search.scss";
+import debounce from "lodash.debounce";
 
 interface SearchProps {
   className?: string;
@@ -10,6 +12,7 @@ interface SearchProps {
   id?: string;
   name?: string;
   invertStyle?: boolean;
+  useDebounce?: boolean;
 }
 
 const Search = (props: SearchProps) => {
@@ -22,7 +25,24 @@ const Search = (props: SearchProps) => {
     id,
     name,
     invertStyle,
+    useDebounce,
   } = props;
+
+  const debouncedSearch = useCallback(
+    debounce((query: string) => onChange?.(query), 500),
+    // eslint-disable-next-line
+    [onChange]
+  );
+
+  const performSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    if (useDebounce) {
+      debouncedSearch(value);
+    } else {
+      onChange?.(value);
+    }
+  };
+
   return (
     <>
       <div
@@ -35,7 +55,8 @@ const Search = (props: SearchProps) => {
           type="search"
           placeholder={placeholder ? placeholder : "Search..."}
           className={isIconRight ? "input-shift" : ""}
-          onChange={(e) => onChange?.(e.target.value)}
+          onChange={performSearch}
+          // onChange={(e) => onChange?.(e.target.value)}
           value={value}
           id={id}
           name={name}

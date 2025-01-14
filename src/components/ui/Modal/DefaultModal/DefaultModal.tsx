@@ -16,24 +16,22 @@ const DefaultModal = (props: ModalProps) => {
   } = props;
 
   return (
-    <>
-      <Modal show={isOpen} onHide={() => onClose()}>
-        <div className="default-modal">
-          <div className="icon" onClick={() => onClose()}>
-            <Icon icon="close" />
-          </div>
-          {children}
-          {!hideButton && (
-            <div onClick={() => onButtonClick?.()}>
-              <Button
-                className="close--button"
-                text={buttonText ? buttonText : "Okay"}
-              />
-            </div>
-          )}
+    <Modal show={isOpen} onHide={() => onClose()}>
+      <div className="default-modal">
+        <div className="icon" onClick={() => onClose()}>
+          <Icon icon="close" />
         </div>
-      </Modal>
-    </>
+        {children}
+        {!hideButton && (
+          <div onClick={() => onButtonClick?.()}>
+            <Button
+              className="close--button"
+              text={buttonText ? buttonText : "Okay"}
+            />
+          </div>
+        )}
+      </div>
+    </Modal>
   );
 };
 

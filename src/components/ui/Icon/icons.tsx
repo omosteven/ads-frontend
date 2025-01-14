@@ -6,7 +6,7 @@ export const icons = {
   file: "fa fa-file",
   search: "fa fa-search",
   user: "fa fa-user",
-  dashboard: "fa fa-tachometer",
+  dashboard: "fa fa-dashboard",
   settings: "fa fa-cogs",
   money: "fa fa-dollar",
   tasks: "fa fa-tasks",
@@ -26,4 +26,6 @@ export const icons = {
   message: "fa fa-message",
   send: "fa fa-paper-plane",
   caret: "fa fa-ellipsis-vertical",
+  filter: "fa fa-filter",
+  facebook: "fa fa-facebook-square",
 };

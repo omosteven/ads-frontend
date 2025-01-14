@@ -18,6 +18,17 @@
         width: 100%;
       }
     }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      i {
+        font-size: 25px;
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
   }
   h3 {
     color: $primary-color;
