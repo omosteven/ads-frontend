@@ -59,6 +59,12 @@ const AboutUs = () => {
           will endeavour to care about environmentally friendly products and
           walk the path with our clients to mitigate climate change worldwide.
         </p>
+        {/* <p> */}
+          <strong>
+            For more information, you can reach us via email{" "}
+            <a href="mailto:info@buythus.com">here</a>
+          </strong>
+        {/* </p> */}
       </section>
     </div>
   );

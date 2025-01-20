@@ -27,5 +27,8 @@ export const icons = {
   send: "fa fa-paper-plane",
   caret: "fa fa-ellipsis-vertical",
   filter: "fa fa-filter",
-  facebook: "fa fa-facebook-square",
+  facebook: "fa-brands fa-facebook",
+  twitter: "fa-brands fa-twitter",
+  instagram: "fa-brands fa-instagram",
+  tiktok: "fa-brands fa-tiktok",
 };
