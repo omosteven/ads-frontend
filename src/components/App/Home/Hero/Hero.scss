@@ -66,11 +66,27 @@
   &__image {
     width: 100%;
     height: 100%;
+    // height: fit-content;
     display: flex;
     justify-content: right;
     align-items: center;
+    margin-bottom: 16px;
+    &__button {
+      margin-left: auto;
+      width: fit-content;
+      margin-top: 16px;
+      @media screen and (max-width: $medium-screen) {
+        margin-right: auto;
+      }
+    }
+
     img {
-      width: 90%;
+      width: 100%;
+      height: 90%;
+      border-radius: 12px;
+    }
+    video {
+      width: 100%;
       height: 90%;
       border-radius: 12px;
     }

@@ -1,6 +1,5 @@
 import { Button } from "components/ui";
 import "./Hero.scss";
-import assets from "assets";
 
 const Hero = () => {
   const goToProducts = () => {
@@ -15,7 +14,16 @@ const Hero = () => {
         <Button text="Check Our Products" onClick={goToProducts} />
       </div>
       <div className="hero__image">
-        <img src={assets.images.dummyImage2} alt="Hero" />
+        <div>
+          <video src={"video/ads-video.mp4"} autoPlay controls muted />
+          {/* <img src={assets.images.dummyImage2} alt="Hero" /> */}
+          <div className="hero__image__button">
+            <Button
+              text="Learn More >>"
+              onClick={() => window.open("https://nftylogslabs.com/", "_blank")}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

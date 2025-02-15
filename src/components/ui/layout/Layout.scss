@@ -137,4 +137,15 @@ body {
       display: none;
     }
   }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo {
+    width: 4rem;
+    height: 4rem;
+  }
 }
