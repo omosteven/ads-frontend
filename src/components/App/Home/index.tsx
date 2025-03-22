@@ -3,11 +3,14 @@ import Products from "./Products";
 
 import "./Home.scss";
 import Promotions from "./Promotions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ViewProduct from "./Products/ViewProduct";
+import CompanySignup from "./CompanySignup";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [open, setOpen] = useState(false);
+
   const [selectedProduct, selectProduct] = useState<any>();
 
   const toggleModal = () => setShowModal((prev) => !prev);
@@ -22,6 +25,12 @@ const Home = () => {
     }
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    },3000);
+  }, []);
+
   return (
     <div className="home">
       <Hero />
@@ -34,6 +43,8 @@ const Home = () => {
           selectedProduct={selectedProduct}
         />
       )}
+
+      <CompanySignup toggleModal={() => setOpen(false)} isOpen={open} />
     </div>
   );
 };
