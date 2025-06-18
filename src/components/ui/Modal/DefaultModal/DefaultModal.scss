@@ -5,12 +5,13 @@
   background-color: $background-color;
   border: 0.5px solid rgba($secondary-color, 0.2);
   border-radius: $border-radius !important;
-
+  overflow: scroll;
   @media screen and (max-width: $medium-screen) {
-    bottom: 0px !important;
+    bottom: 30px !important;
     position: fixed;
     right: 10px;
     left: 10px;
+    height: 85vh;
   }
 
   .icon {
