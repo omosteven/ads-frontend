@@ -47,8 +47,9 @@ const CompanySignup = ({
       buttonText="Register"
       onButtonClick={toggleModal}
     >
-      <h2>Hi, Get A Discount From Us</h2>
-      <p>Kindly fill the form below and we will get in touch.</p>
+      {/* <h2>Hi, Get A Discount From Us</h2> */}
+      <h2>Please Register Your Discount Offering To Customers.</h2>
+      {/* <p>Kindly fill the form below and we will get in touch.</p> */}
       <form onSubmit={handleSubmit}>
         <Input
           name="organization"

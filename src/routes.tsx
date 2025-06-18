@@ -1,4 +1,5 @@
 import AboutUs from "components/App/AboutUs";
+import Discounts from "components/App/Discounts";
 import Home from "components/App/Home";
 
 export const routes = [
@@ -14,6 +15,13 @@ export const routes = [
     component: <AboutUs />,
     subRoutes: [],
     title: "About Us",
+    icon: "none",
+  },
+  {
+    route: "/discounts",
+    component: <Discounts />,
+    subRoutes: [],
+    title: "Available Discounts",
     icon: "none",
   },
 ];

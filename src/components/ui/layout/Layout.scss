@@ -114,19 +114,22 @@ body {
   }
 
   @media screen and (max-width: $medium-screen) {
-    padding: 0px 50px;
+    padding: 0px 30px;
+    li {
+      font-size: 16px;
+    }
   }
 
   @media screen and (max-width: $small-screen) {
     padding: 0 12px;
-    gap: 30px;
+    gap: 10px;
     height: 70px;
-    justify-content: unset;
+    justify-content: space-between;
     margin-left: auto;
     width: fit-content;
     margin-right: auto;
     li {
-      font-size: 16px;
+      font-size: 14px;
     }
     .custom-button {
       display: none !important;
@@ -147,5 +150,9 @@ body {
   &__logo {
     width: 4rem;
     height: 4rem;
+    @media screen and (max-width: $small-screen) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }

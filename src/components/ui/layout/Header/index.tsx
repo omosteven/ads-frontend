@@ -24,8 +24,11 @@ const Header = () => {
         <Link to={"/about-us"}>About Us</Link>
       </li>
       <li>
+        <Link to={"/discounts"}>Discounts</Link>
+      </li>
+      <li>
         <Link to={"/"} onClick={goToProducts}>
-          Our Products
+          Products
         </Link>
       </li>
       {/* </div> */}

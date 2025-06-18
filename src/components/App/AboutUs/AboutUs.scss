@@ -10,11 +10,11 @@
   }
 
   @media screen and (max-width: $medium-screen) {
-    padding: 0px 50px;
+    padding: 30px 30px;
   }
 
   @media screen and (max-width: $small-screen) {
-    padding: 0px 24px;
+    padding: 20px 24px;
   }
 
   h1 {
@@ -23,6 +23,15 @@
     line-height: 65px;
     font-weight: 800;
     text-wrap: wrap;
+    @media screen and (max-width: $medium-screen) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   h3 {
@@ -31,6 +40,7 @@
   padding-top: 60px;
   p {
     line-height: 30px;
+    text-align: justify;
   }
 
   strong {
