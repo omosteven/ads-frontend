@@ -23,13 +23,16 @@ const CompanySignup = ({
   // https://ramified-backend.onrender.com/api/v1/joinus
   const submitForm = async () => {
     try {
+      setDisableBtn(true);
       const request = await API.post(
         "https://ramified-backend.onrender.com/api/v1/join-as-company",
         form
       );
+      setDisableBtn(false);
       toastMessage("Thank you for filling the form!");
       toggleModal();
     } catch (e) {
+      setDisableBtn(false);
       toastMessage("Sorry, an error occurred. Try again", true);
     }
   };
@@ -83,7 +86,12 @@ const CompanySignup = ({
           required
         />
         <div>
-          <Button className="close--button" text={"Submit"} type="submit" />
+          <Button
+            isLoading={disableBtn}
+            className="close--button"
+            text={disableBtn ? "Please wait..." : "Submit"}
+            type="submit"
+          />
         </div>
       </form>
     </DefaultModal>
