@@ -20,10 +20,11 @@ const CompanySignup = ({
     }));
   };
 
+  // https://ramified-backend.onrender.com/api/v1/joinus
   const submitForm = async () => {
     try {
       const request = await API.post(
-        "https://ramified-backend.onrender.com/api/v1/joinus",
+        "https://ramified-backend.onrender.com/api/v1/join-as-company",
         form
       );
       toastMessage("Thank you for filling the form!");
