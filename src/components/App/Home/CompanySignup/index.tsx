@@ -31,9 +31,12 @@ const CompanySignup = ({
       setDisableBtn(false);
       toastMessage("Thank you for filling the form!");
       toggleModal();
-    } catch (e) {
+    } catch (e: any) {
       setDisableBtn(false);
-      toastMessage("Sorry, an error occurred. Try again", true);
+      toastMessage(
+        e?.response?.data?.message || "Sorry, an error occurred. Try again",
+        true
+      );
     }
   };
 
